@@ -1,5 +1,5 @@
 //El cliente se va a poder conectar a nuestro socket
-var port = 8080;
+var port = process.env.PORT || 8080;
 var socket = io.connect(`https://chatvideoconferencias.herokuapp.com:${port}` , {'forceNew':true}); /*El primer parametro es la URL del servidor 
                                                                             y el segundo la indicacion de forzar la 
                                                                             conexion 
