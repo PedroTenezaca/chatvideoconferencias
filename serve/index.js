@@ -6,7 +6,7 @@ inicir el servidor
 var server = require('http').Server(app); 
 //Cargamos Socket.io y mandamos como parametro al servidor que va a estar escuchando
 var io = require('socket.io')(server);
-var port = 8080; //Especificamos el puerto 
+var port = process.env.PORT || 8080; //Especificamos el puerto 
 //Inicializamos el servidor
 server.listen(port , function(){ 
     console.log(`El servidor esta funcionando en http://localhost:${port}`);
