@@ -3,7 +3,7 @@ var app = express(); //Construir el Objeto Express
 /*Cargamos el servidor HTTP, especificamos que utilizaremos express para 
 inicir el servidor
 */
-var server = require('http').Server(app); 
+var server = require('https').Server(app); 
 //Cargamos Socket.io y mandamos como parametro al servidor que va a estar escuchando
 var io = require('socket.io')(server);
 var port = process.env.PORT || 8080; //Especificamos el puerto 
