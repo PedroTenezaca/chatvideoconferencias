@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Servicio de Chat y Videoconferencia</title>
+        <script type = 'text/javascript' src = '/socket.io/socket.io.js'></script> <!--Permitira la interaccion entre 
+                                                                                    cliente servidor-->
+        <script src='main.js'></script>
+        <link type="text/css" rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        
+            <div id="wrapper">
+                <div id="menu">
+                    <p class="welcome">Welcome to chat, <b></b></p>
+                    <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+                    <div style="clear:both"></div>
+                </div>
+                        
+                <div id="chatbox"><div id = 'messages'></div></div>
+                        
+                <form name="message" onsubmit="return addMessage(this)">
+                    <input name="usermsg" type="text" id="nickname" placeholder="NickName" size="63" />
+                    <textarea name="usermsg" type="text" id="text" placeholder="Message..." size="63" ></textarea>
+                    <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+                </form>
+            </div>
+        
+    </body>
+</html>
+
